@@ -1,7 +1,7 @@
 ![NIAZI-MD MENU](https://i.ibb.co/gbbGmx3G/shaban-md.jpg)
 
 ---
-
+ 
 <h1 align="center">⚡ NIAZI-MD ⚡</h1>
 <p align="center">
   <b>The Most Powerful & Smart Multi-Device WhatsApp Bot</b><br>
