@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NIAZI-MD Pair Code</title>
+  <style>
+    body {
+      background: #0f0f0f;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      flex-direction: column;
+    }
+    h1 {
+      color: #00ff9d;
+      margin-bottom: 20px;
+    }
+    button {
+      background-color: #00ff9d;
+      border: none;
+      color: #000;
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #0dcf7d;
+      transform: scale(1.05);
+    }
+    .output {
+      margin-top: 20px;
+      font-size: 18px;
+      background: #1a1a1a;
+      padding: 15px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 500px;
+      text-align: center;
+      word-break: break-all;
+    }
+    .loading {
+      color: #00ff9d;
+      font-size: 16px;
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>⚡ NIAZI-MD Pair Code Generator ⚡</h1>
+  <button id="pairBtn">Generate Pair Code</button>
+  <div class="loading" id="loading">Generating... Please wait ⏳</div>
+  <div class="output" id="output"></div>
+
+  <script>
+    const pairBtn = document.getElementById("pairBtn");
+    const output = document.getElementById("output");
+    const loading = document.getElementById("loading");
+
+    pairBtn.addEventListener("click", async () => {
+      output.textContent = "";
+      loading.style.display = "block";
+
+      try {
+        const res = await fetch("/pairtext");
+        const data = await res.json();
+        loading.style.display = "none";
+
+        if (data.ok && data.pair) {
+          output.innerHTML = `
+            ✅ <b>Pair Code Generated!</b><br><br>
+            <span style="color:#00ff9d;font-size:20px;">${data.pair}</span>
+            <br><br>
+            📱 Use this code in your WhatsApp bot terminal to connect.
+          `;
+        } else {
+          output.innerHTML = `<span style="color:red;">❌ Error: ${data.error || 'Failed to generate pair code'}</span>`;
+        }
+      } catch (err) {
+        loading.style.display = "none";
+        output.innerHTML = `<span style="color:red;">⚠️ ${err.message}</span>`;
+      }
+    });
+  </script>
+</body>
+</html>
