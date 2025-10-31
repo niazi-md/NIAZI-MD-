@@ -1,96 +1,133 @@
-// index.js
-// NIAZI-MD — Express + Baileys pairing endpoints
-const express = require('express');
-const path = require('path');
-const fs = require('fs');
-const pino = require('pino');
-const qrcode = require('qrcode');
-const { default: makeWASocket, useMultiFileAuthState, fetchLatestBaileysVersion } = require('@whiskeysockets/baileys');
+/**
+ * NIAZI-MD - WhatsApp Multi Device Bot
+ * Owner: +92 344 8166105
+ * Channel: https://whatsapp.com/channel/0029VbBKWrA2v1Iu4KVE3A1H
+ * Group: https://chat.whatsapp.com/KJ6qs3H2xC6AQPYRTaNBNm?mode=wwt
+ * Menu Image: https://i.ibb.co/gbbGmx3G/shaban-md.jpg
+ */
+
+import makeWASocket, {
+    useMultiFileAuthState,
+    DisconnectReason,
+    fetchLatestBaileysVersion
+} from "@whiskeysockets/baileys";
+import pino from "pino";
+import fs from "fs";
+import path from "path";
+import express from "express";
 
 const app = express();
-app.use(express.static(path.join(__dirname, 'public')));
-
-// store latest pair data
-let lastPairRaw = null;     // raw pair string (if Baileys gives)
-let lastQrDataUrl = null;   // QR image data URL for /qr
+const PORT = process.env.PORT || 3000;
+app.get("/", (req, res) => res.send("🚀 NIAZI-MD Bot is Running!"));
+app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
 
 async function startBot() {
-  try {
-    // ensure auth_info folder exists
-    if (!fs.existsSync(path.join(__dirname, 'auth_info'))) {
-      fs.mkdirSync(path.join(__dirname, 'auth_info'));
-    }
+    const { state, saveCreds } = await useMultiFileAuthState("./auth_info");
+    const { version } = await fetchLatestBaileysVersion();
 
-    const { version } = await fetchLatestBaileysVersion().catch(()=>({ version: [2, 2203, 3] }));
-    const { state, saveCreds } = await useMultiFileAuthState(path.join(__dirname, 'auth_info'));
-
-    const sock = makeWASocket({
-      version,
-      logger: pino({ level: 'silent' }),
-      printQRInTerminal: false,
-      auth: state
+    const niazi = makeWASocket({
+        logger: pino({ level: "silent" }),
+        printQRInTerminal: true,
+        auth: state,
+        browser: ["NIAZI-MD", "Safari", "1.0.0"],
+        version
     });
 
-    sock.ev.on('creds.update', saveCreds);
+    niazi.ev.on("creds.update", saveCreds);
 
-    sock.ev.on('connection.update', async (update) => {
-      try {
-        // update.qr may contain pairing string (raw)
-        if (update.qr) {
-          lastPairRaw = update.qr;
-          lastQrDataUrl = await qrcode.toDataURL(update.qr);
-          // save image to public/qr.png
-          const base64 = lastQrDataUrl.replace(/^data:image\/png;base64,/, '');
-          const publicDir = path.join(__dirname, 'public');
-          if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir);
-          fs.writeFileSync(path.join(publicDir, 'qr.png'), base64, 'base64');
-          console.log('✅ Pair QR ready (saved to public/qr.png).');
+    niazi.ev.on("connection.update", (update) => {
+        const { connection, lastDisconnect } = update;
+        if (connection === "close") {
+            const reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
+            if (reason === DisconnectReason.badSession) {
+                console.log("❌ Bad session, delete session and scan again");
+            } else if (reason === DisconnectReason.connectionClosed) {
+                console.log("🔁 Connection closed, reconnecting...");
+                startBot();
+            } else if (reason === DisconnectReason.connectionLost) {
+                console.log("❌ Connection lost, reconnecting...");
+                startBot();
+            } else if (reason === DisconnectReason.loggedOut) {
+                console.log("❌ Logged out, delete session and scan again");
+            } else {
+                console.log("⚠️ Unknown disconnect reason, reconnecting...");
+                startBot();
+            }
+        } else if (connection === "open") {
+            console.log("✅ NIAZI-MD Connected Successfully!");
         }
-        if (update.connection === 'open') {
-          console.log('✅ WhatsApp connected (Baileys).');
-        }
-        if (update.connection === 'close') {
-          console.log('🔁 Connection closed', update.lastDisconnect || update);
-        }
-      } catch (e) {
-        console.error('Connection update error', e);
-      }
     });
 
-    console.log('Bot started — waiting for pairing events (if needed).');
-  } catch (err) {
-    console.error('startBot error:', err);
-  }
+    niazi.ev.on("messages.upsert", async ({ messages }) => {
+        const msg = messages[0];
+        if (!msg.message) return;
+
+        const from = msg.key.remoteJid;
+        const type = Object.keys(msg.message)[0];
+        const body =
+            type === "conversation"
+                ? msg.message.conversation
+                : type === "imageMessage"
+                ? msg.message.imageMessage.caption
+                : type === "videoMessage"
+                ? msg.message.videoMessage.caption
+                : type === "extendedTextMessage"
+                ? msg.message.extendedTextMessage.text
+                : "";
+
+        const reply = (text) =>
+            niazi.sendMessage(from, { text }, { quoted: msg });
+
+        // Simple command system
+        const prefix = ".";
+        if (!body.startsWith(prefix)) return;
+        const command = body.slice(1).trim().split(" ")[0].toLowerCase();
+
+        switch (command) {
+            case "alive":
+                await reply(`╭───『 *NIAZI-MD* 』───╮
+┃ 👑 *Owner:* +92 344 8166105
+┃ 💬 *Status:* Online
+┃ 🧠 *Prefix:* .
+┃ 📅 *Date:* ${new Date().toLocaleDateString()}
+┃ 🕒 *Time:* ${new Date().toLocaleTimeString()}
+╰─────────────────╯`);
+                break;
+
+            case "menu":
+                await niazi.sendMessage(
+                    from,
+                    {
+                        image: { url: "https://i.ibb.co/gbbGmx3G/shaban-md.jpg" },
+                        caption: `╭───『 *NIAZI-MD MENU* 』───╮
+┃ 🌐 Channel: https://whatsapp.com/channel/0029VbBKWrA2v1Iu4KVE3A1H
+┃ 👥 Group: https://chat.whatsapp.com/KJ6qs3H2xC6AQPYRTaNBNm?mode=wwt
+┃ 👑 Owner: +92 344 8166105
+┃ 🧠 Prefix: .
+┃ ⚙️ Status: Online
+┃ 📅 ${new Date().toLocaleDateString()}
+┃ 🕒 ${new Date().toLocaleTimeString()}
+╰─────────────────╯`
+                    },
+                    { quoted: msg }
+                );
+                break;
+
+            case "owner":
+                await reply(`👑 *NIAZI-MD Owner:*
+📞 +92 344 8166105
+🌐 Channel: https://whatsapp.com/channel/0029VbBKWrA2v1Iu4KVE3A1H
+👥 Group: https://chat.whatsapp.com/KJ6qs3H2xC6AQPYRTaNBNm?mode=wwt`);
+                break;
+
+            case "ping":
+                await reply("🏓 Pong! Bot is active ✅");
+                break;
+
+            default:
+                await reply("❓ Unknown Command! Type *.menu* to see list.");
+        }
+    });
 }
 
-// Start bot in background
 startBot();
-
-// Routes
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
-
-// show QR image if available
-app.get('/qr', (req, res) => {
-  if (lastQrDataUrl) {
-    res.send(`<div style="text-align:center;font-family:Arial">
-      <h3>Scan this QR with another phone</h3>
-      <img src="${lastQrDataUrl}" style="max-width:360px;border-radius:8px"/>
-    </div>`);
-  } else {
-    res.send('<p>QR not ready yet. Check bot logs or refresh after few seconds.</p>');
-  }
-});
-
-// return raw pair string (JSON) — for pair.html fetching
-app.get('/paircode', (req, res) => {
-  if (lastPairRaw) return res.json({ ok: true, code: lastPairRaw });
-  return res.json({ ok: false, code: null });
-});
-
-// simple health
-app.get('/health', (req, res) => res.json({ ok: true, bot: 'NIAZI-MD' }));
-
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`🚀 NIAZI-MD running on port ${PORT}`));
