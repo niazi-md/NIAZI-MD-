@@ -1,0 +1,9 @@
+// config.js
+module.exports = {
+  BOT_NAME: "NIAZI-MD",
+  OWNER_NUMBER: "+923448166105",
+  WHATSAPP_CHANNEL: "https://whatsapp.com/channel/0029VbBKWrA2v1Iu4KVE3A1H",
+  WHATSAPP_GROUP: "https://chat.whatsapp.com/KJ6qs3H2xC6AQPYRTaNBNm?mode=wwt",
+  MENU_IMG: "https://i.ibb.co/gbbGmx3G/shaban-md.jpg",
+  REPO: "https://github.com/Niaziofficial/NIAZI-HACKER-"
+};
