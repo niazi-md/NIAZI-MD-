@@ -1,0 +1,23 @@
+{
+  "name": "NIAZI-MD",
+  "description": "NIAZI-MD WhatsApp Multi-device bot (pair endpoint)",
+  "keywords": ["whatsapp","baileys","niazi-md"],
+  "repository": "https://github.com/Niaziofficial/NIAZI-HACKER-",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "NODE_ENV": {
+      "description": "Set to production",
+      "value": "production"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
