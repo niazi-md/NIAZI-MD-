@@ -1,106 +1,24 @@
-// index.js - NIAZI-MD pairing + simple web endpoints
-const express = require('express');
-const path = require('path');
-const fs = require('fs');
-const qrcode = require('qrcode');
-const pino = require('pino');
-const { default: makeWASocket, useMultiFileAuthState, fetchLatestBaileysVersion } = require('@whiskeysockets/baileys');
+import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
-app.use(express.static(path.join(__dirname, 'public'))); // serve public files if you add public/index.html, public/pair.html
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-let lastPairRaw = null;    // raw pairing string (text)
-let lastPairDataUrl = null; // data:image/png;base64,...
+app.use(express.static(path.join(__dirname, "public")));
 
-async function startBot() {
-  try {
-    // create auth_info directory if not exists
-    if (!fs.existsSync('./auth_info')) fs.mkdirSync('./auth_info');
-
-    // fetch latest Baileys version for compatibility
-    let versionInfo = { version: [4, 0, 0] };
-    try {
-      const v = await fetchLatestBaileysVersion();
-      if (v && v.version) versionInfo = v;
-    } catch (e) {
-      // ignore - fallback to default
-    }
-
-    const { state, saveCreds } = await useMultiFileAuthState('./auth_info');
-
-    const sock = makeWASocket({
-      version: versionInfo.version,
-      logger: pino({ level: 'silent' }),
-      printQRInTerminal: false,
-      auth: state
-    });
-
-    sock.ev.on('creds.update', saveCreds);
-
-    sock.ev.on('connection.update', async (update) => {
-      // Baileys may emit update.qr (raw pairing string) or update.pairingCode depending on version
-      if (update.qr || update.pairingCode || update.qrString) {
-        try {
-          const raw = update.qr || update.pairingCode || update.qrString;
-          lastPairRaw = raw;
-          lastPairDataUrl = await qrcode.toDataURL(String(raw));
-          // save image for public view (optional)
-          const base64 = lastPairDataUrl.replace(/^data:image\/png;base64,/, '');
-          if (!fs.existsSync(path.join(__dirname, 'public'))) fs.mkdirSync(path.join(__dirname, 'public'));
-          fs.writeFileSync(path.join(__dirname, 'public', 'qr.png'), base64, 'base64');
-          console.log('✅ Pair text ready. Use /pairtext or /qr to view.');
-        } catch (err) {
-          console.error('QR generate error', err);
-        }
-      }
-
-      if (update.connection === 'open') {
-        console.log('✅ WhatsApp connected (open).');
-      }
-
-      if (update.connection === 'close') {
-        console.log('🔁 Connection closed. See logs for details.');
-      }
-    });
-
-    console.log('🔧 Bot started (Baileys). Waiting for pairing requests...');
-  } catch (err) {
-    console.error('Start bot failed:', err);
-  }
-}
-
-startBot();
-
-// Routes for web UI or API
-app.get('/', (req, res) => {
-  // if user added public/index.html it will be served automatically because of express.static
-  res.send(`<h2>NIAZI-MD running</h2>
-    <p>Use <a href="/pair.html">Pair page</a> (if added) or <a href="/qr">/qr</a> to view QR image, and <a href="/pairtext">/pairtext</a> for raw pairing text.</p>`);
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/index.html"));
 });
 
-app.get('/qr', (req, res) => {
-  if (lastPairDataUrl) {
-    return res.send(`<div style="font-family:Arial;text-align:center">
-      <h3>Scan this QR (use another phone)</h3>
-      <img src="${lastPairDataUrl}" style="max-width:360px;border-radius:8px"/>
-      <p><small>Do not scan from same device.</small></p>
-    </div>`);
-  }
-  res.send('QR not ready yet. Wait for bot to request pairing (refresh after few seconds).');
+app.get("/pair.html", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/pair.html"));
 });
 
-// return JSON raw pair text
-app.get('/pairtext', (req, res) => {
-  if (lastPairRaw) return res.json({ ok: true, pair: lastPairRaw });
-  return res.json({ ok: false, pair: null, message: 'no code yet' });
-});
-
-// optional: provide PNG saved in /public/qr.png
-app.get('/pair.png', (req, res) => {
-  const p = path.join(__dirname, 'public', 'qr.png');
-  if (fs.existsSync(p)) return res.sendFile(p);
-  res.status(404).send('No image saved yet.');
+app.get("/pairtext", (req, res) => {
+  const code = "NIAZI-" + Math.random().toString(36).substring(2, 10).toUpperCase();
+  res.json({ ok: true, pair: code });
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`🚀 NIAZI-MD running on port ${PORT}`));
+app.listen(PORT, () => console.log(`✅ NIAZI-MD running on port ${PORT}`));
