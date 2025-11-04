@@ -1,12 +1,15 @@
 {
   "name": "niazi-md",
   "version": "1.0.0",
-  "description": "The Most Powerful WhatsApp Bot by Hacker NIAZI-MD",
+  "description": "⚡ The Most Powerful & Smart Multi-Device WhatsApp Bot by Hacker NIAZI ⚡",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=18.x"
   }
 }
