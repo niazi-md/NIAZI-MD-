@@ -53,7 +53,23 @@ ___
   </a>
 </p>
 
--------------
+---
+
+## 🔗 Important Links  
+
+<p align="center">
+  <a href="https://pair-code.niazi-md.zone.id/" target="_blank">
+    <img src="https://img.shields.io/badge/PAIR%20CODE-Click%20Here-green?style=for-the-badge&logo=github">
+  </a>
+  <a href="https://chat.whatsapp.com/F0dU1kXXXXXXX" target="_blank">
+    <img src="https://img.shields.io/badge/WHATSAPP%20GROUP-Join%20Now-blue?style=for-the-badge&logo=whatsapp">
+  </a>
+  <a href="https://t.me/NIAZI_MD_UPDATES" target="_blank">
+    <img src="https://img.shields.io/badge/UPDATE%20CHANNEL-Join%20Fast-orange?style=for-the-badge&logo=telegram">
+  </a>
+</p>
+
+---
 
 <p align="center">
   <img src="./NIAZI/deployment.svg" width="600" alt="NIAZI MD — News Ticker Typing">
@@ -87,78 +103,3 @@ ___
 </table>  
 
 -------------
-
-**_✠ FREE DEPLOYMENT OF NIAZI MD GITHUB WORKFLOW CODE NEW ADD ERROR FIXED ✠_**
-runs-on: ubuntu-latest
-
-strategy:
-  matrix:
-    node-version: [20.x]
-
-steps:
-- name: Checkout repository
-  uses: actions/checkout@v3
-
-- name: Set up Node.js
-  uses: actions/setup-node@v3
-  with:
-    node-version: ${{ matrix.node-version }}
-    check-latest: true
-
-- name: Install dependencies
-  run: npm install
-
-- name: Build project (optional)
-  run: npm run build || echo "No build script found, skipping..."
-
-- name: Start application
-  run: npm start
--------
-
-<p align="center">
-  <img src="https://i.imgur.com/LyHic3i.gif" alt="divider"/>
-</p>
-
-
-> 🔔 Stay Connected For Updates Feature Drops And Tutorials!
-
-<a href="https://youtube.com/@niazimd?si=ZVANSbKM0yajAbl_" target="_blank">
-  <img src="NIAZI/youtube.svg" alt="YouTube" width="250"/>
-</a>
-
-<p align="center">
-  <img src="https://i.imgur.com/LyHic3i.gif" alt="footer divider"/>
-</p>
-
-## ⚠️ _WARNING !_
-
-<div style="background-color: #000000; border-left: 5px solid #ff00ff; padding: 10px; border-radius: 0 15px 15px 0; box-shadow: 0 0 15px #ff00ff;">
-  <h3 style="color: #00ffff; font-family: 'Orbitron', sans-serif;">DISCLAIMER</h3>
-  <p style="color: #ffffff;">This Bot Is Not Affiliated With WhatsApp Inc. Use At Your Own Risk Misuse May Result In Account Bans</p>
-</div>
-
-
-<div align="center">
-<p align="center">
-  <img src="https://i.imgur.com/dBaSKWF.gif" height="40" width="100%">
-</p>
-  <a href="https://github.com/HACKER-NIAZI">
-    <img src="https://github-readme-stats.vercel.app/api?username=HACKER-NIAZI&show_icons=true&theme=dark&border_color=00ffff&title_color=00ffff&icon_color=00ffff" width="400"/>
-  </a>
-</div>
-<p align="center">
-  <img src="https://i.imgur.com/dBaSKWF.gif" height="40" width="100%">
-</p>
-
-<div style="margin-top:20px">
-
-[![Contributors](https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=3000&pause=1000&color=58A6FF&background=00000000&center=true&vCenter=true&width=500&lines=THANKS+TO+ALL+CONTRIBUTORS+%F0%9F%99%8F;SPECIAL+THANKS+TO+OUR+STAR+SUPPORTERS+%E2%AD%90)](https://github.com/HACKER-NIAZI/NIAZI-MD/graphs/contributors)
-
-</div>
-
- <p align="center"> <a href="https://github.com/HACKER-NIAZI/NIAZI-MD/stargazers"> <img src="http://reporoster.com/stars/dark/HACKER-NIAZI/NIAZI-MD" alt="Stargazers Repo Roster For @HACKER-NIAZI/NIAZI-MD"> </a> </p> <p align="center"> <a href="https://github.com/HACKER-NIAZI/NIAZI-MD/network/members"> <img src="http://reporoster.com/forks/dark/HACKER-NIAZI/NIAZI-MD" alt="Forkers Repo Roster For @HACKER-NIAZI/NIAZI-MD"> </a> </p> 
-
-<p align="center">
-<img src="NIAZI/nolove.svg" alt="NoLove" width="250"/>
-</p>
-NIAZI-MD
