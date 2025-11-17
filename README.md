@@ -1,105 +1,113 @@
-![WELCOME](NIAZI/wellcome.svg)
-  
-______
-
-[![NIAZI-MD](https://raw.githubusercontent.com/HACKER-NIAZI/NIAZI-MD/main/NIAZI/mr.svg)](https://whatsapp.com/channel/0029Vb6aq4cCHDygiEqJZl0S)
-___ 
-
-<p align="center">
-  <a href="https://github.com/HACKER-NIAZI" target="_blank">
-    <img src="./NIAZI/dev-gold-mini.svg" width="300" alt="Developer — NIAZI-MD (Gold 3D)">
-  </a>
-</p>
-
-  
-<p align="center">
-  <a href="https://whatsapp.com/channel/0029Vb6aq4cCHDygiEqJZl0S" target="_blank">
-    <img src="./NIAZI/channel-update.svg" width="350" alt="Bot Updating — WhatsApp Channel | Join Fast">
-  </a>
-</p>
-
----------
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+«𝐀𝐃𝐄𝐄𝐋-𝐌𝐃»
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+<h1 align="center">
+  <img src="https://files.catbox.moe/hg5hj6.jpg" alt="𝐀𝐃𝐄𝐄𝐋-𝐌𝐃" width="800" style="border-radius:25px;box-shadow:0 0 30px violet;"/>
+</h1>
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+<h1 align="center">
+  <span style="background: linear-gradient(to right, #ff00cc, #3333ff, #00ffcc, #33ff33, #ffcc00); 
+               -webkit-background-clip: text; 
+               color: transparent; 
+               font-size: 45px; 
+               font-weight: bold;">
+    <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+    ✨𝐀𝐃𝐄𝐄𝐋-𝐌𝐃✨
+    <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+  </span>
+</h1>
 
 <p align="center">
-<a href="https://github.com/HACKER-NIAZI/NIAZI-MD"><img title="PUBLIC-BOT" src="https://img.shields.io/static/v1?label=Language&message=JavaScript&style=square&color=darkpink"></a> &nbsp;
-  <img src="https://komarev.com/ghpvc/?username=NIAZI-MD&label=VIEWS&style=square&color=blue" />
-</p>
-
-
--------------
-
-<p align="center">
-<img src="NIAZI/feature-bot.svg" alt="Feature Bot" width="900"/>
-  
-<p align="center">
-<img src="NIAZI/license.svg" alt="License" width="200"/>
-
---------------
-
-<p align="center">
-<img src="NIAZI/maintenance.svg" alt="Maintenance" width="120"/>
-
-
- <p align="center">
-  <a href="https://github.com/HACKER-NIAZI/NIAZI-MD/fork" target="_blank">
-    <img src="NIAZI/forkstar-holo.svg" width="180" alt="Fork Star Bot Repo"/>
-  </a>
-</p>
-
-
-<p align="center">
-  <a href="https://pair-code.niazi-md.zone.id/" target="_blank">
-    <img src="./NIAZI/paircode-link.svg" width="195" alt="PAIR_CODE – Device Session ID">
-  </a>
+  <b>A multi-device WhatsApp bot created & maintained by <span style="color:#00FFFF">ADEEL</span> 🚀</b>
 </p>
 
 ---
-
-## 🔗 Important Links  
-
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+## ⭐ 𝐅𝐎𝐑𝐊 & 𝐒𝐓𝐀𝐑
 <p align="center">
-  <a href="https://pair-code.niazi-md.zone.id/" target="_blank">
-    <img src="https://img.shields.io/badge/PAIR%20CODE-Click%20Here-green?style=for-the-badge&logo=github">
+  <a href="https://github.com/Adeel-Xtech/ADEEL-MD/fork">
+    <img src="https://img.shields.io/badge/Fork-Repo-ff00ff?style=for-the-badge&logo=github&logoColor=white" />
   </a>
-  <a href="https://chat.whatsapp.com/F0dU1kXXXXXXX" target="_blank">
-    <img src="https://img.shields.io/badge/WHATSAPP%20GROUP-Join%20Now-blue?style=for-the-badge&logo=whatsapp">
-  </a>
-  <a href="https://t.me/NIAZI_MD_UPDATES" target="_blank">
-    <img src="https://img.shields.io/badge/UPDATE%20CHANNEL-Join%20Fast-orange?style=for-the-badge&logo=telegram">
+  <a href="https://github.com/Adeel-Xtech/ADEEL-MD/fork">
+    <img src="https://img.shields.io/github/stars/ADEEL967MD/ADEEL-MD?style=for-the-badge&color=gold&logo=github" />
   </a>
 </p>
+<p align="center">💡 Don’t forget to <b>Fork</b> & <b>Star ⭐</b> this repo before using!</p>
 
 ---
-
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+## 🔑 𝐆𝐄𝐓 𝐏𝐀𝐈𝐑
 <p align="center">
-  <img src="./NIAZI/deployment.svg" width="600" alt="NIAZI MD — News Ticker Typing">
+  <a href="https://adeel-xtech-97cef03b1167.herokuapp.com/">
+    <img src="https://img.shields.io/badge/Get-PAIR_CODE-00BFFF?style=for-the-badge&logo=whatsapp&logoColor=white" />
+  </a>
 </p>
+<p align="center">📲 Click above button to generate your <b>Session ID</b> (required for deployment).</p>
 
-<div align="center">
-  <table>
-    <tr>
-      <td><a href="https://dashboard.heroku.com/new-app?template=https://github.com/HACKER-NIAZI/NIAZI-MD" target="_blank"><img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white&labelColor=000000&color=0000FF"/></a></td>
-      <td><a href="https://niazi-md.site" target="_blank"><img src="https://img.shields.io/badge/official-site-A52A2A?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=000000"/></a></td>
-    </tr>
-    <tr>
-      <td><a href="https://niazi-bomber.zone.id/" target="_blank"><img src="https://img.shields.io/badge/SMS-BOMBER-FF009D?style=for-the-badge&logo=firefoxbrowser&logoColor=white&labelColor=000000"/></a></td>
-      <td><a href="https://railway.app/new" target="_blank"><img src="https://img.shields.io/badge/Railway-000080?style=for-the-badge&logo=railway&logoColor=white&labelColor=000000"/></a></td>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/iTx-Sarkar/SMD-Render" target="_blank"><img src="https://img.shields.io/badge/Render-000000?style=for-the-badge&logo=render&logoColor=white&labelColor=000000&color=FFFF00"/></a></td>
-      <td><a href="https://niazi-free-host.zone.id/" target="_blank"><img src="https://img.shields.io/badge/Free-host-CC00FF?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=000000"/></a></td>
-    </tr>
-  </table>
-</div>
+---
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+## 🚀 𝐃𝐄𝐏𝐋𝐎𝐘𝐄 𝐍𝐎𝐖 
+<p align="center">
+  <a href="https://dashboard.heroku.com/new?template=https://github.com/Adeel-Xtech/ADEEL-MD">
+    <img src="https://img.shields.io/badge/Deploy-Heroku-7952B3?style=for-the-badge&logo=heroku&logoColor=white" />
+  </a>
+</p>
+<p align="center">🪸 𝐃𝐄𝐏𝐋𝐎𝐘𝐄 ʜᴇʀᴏᴋᴜ 🐍🍷</p>
 
-<table align="center">
-  <tr>
-    <td>
-      <a href="https://github.com/iTx-Sarkar/SMD-Render" target="_blank">
-        <img alt="Deploy From Render" src="https://img.shields.io/badge/Deploy-Only%20Render%20Repo-4CAF50?style=for-the-badge&logo=render&logoColor=white"/>
-      </a>
-    </td>
-  </tr>
-</table>  
+---
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+## 📡 𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏 𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐒
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+<p align="center">
+  <a href="https://whatsapp.com/channel/0029VbBmz4V5vKAIaWfYPT0C">
+    <img src="https://img.shields.io/badge/Join-Channel-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+  </a>
+  <a href="https://api.whatsapp.com/send?phone=+923035512967&text=➪𝐇𝐄𝐘𓆩🐍🍷🌹'">
+    <img src="https://img.shields.io/badge/Contact-Owner-ff0000?style=for-the-badge&logo=whatsapp&logoColor=white" />
+  </a>
+</p>
+<p align="center">📢 Stay connected with <b>Channel</b> & <b>Owner</b> for updates.</p>
 
--------------
+---
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+## ⚡𝐅𝐄𝐀𝐓𝐔𝐑𝐄𝐒
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+- ✅ MEDIA DOWNLOAD 📺 | Many cool features 🍷  
+✅ GROUP FUCHER 𓆩🐍 | Many cool features 🍷  
+✅ AUTO REPLY 🍨 | Many cool features 🍷  
+✅ AUTO RECORDING HYPING | Many cool features 🍷  
+✨ MORE FEATURES ON THIS BOARD ✨  
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+
+---
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+## 𝐑𝐄𝐌𝐈𝐍𝐃𝐄𝐑
+❌ NOTICE: This bot is NOT affiliated with WhatsApp Inc.
+
+⚡ WARNING: Any misuse, spam, or violation of rules may result 
+   in your number being permanently banned from using this bot.
+
+📌 Please use this bot responsibly and follow the guidelines 
+   to avoid any issues.  
+- 🛡️ Owner is not responsible for any misuse.  
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+
+---
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+## 📝 𝐃𝐈𝐒𝐂𝐋𝐀𝐈𝐌𝐄𝐑
+🎯 This bot is made for **Learning & Fun purposes only**.
+
+❌ Do not misuse, sell, or use without giving proper credits.
+
+✨ Enjoy responsibly and respect the creator’s work.  
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+
+---
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+<h2 align="center">
+  🌈✨ ᴛʜᴀɴᴋ ғᴏʀ ᴜsɪɴɢ <span style="color:#00FFFF">𝐀𝐃𝐄𝐄𝐋-𝐌𝐃</span>✨🌈
+</h2>
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
