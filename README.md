@@ -1,8 +1,8 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-«𝐀𝐃𝐄𝐄𝐋-𝐌𝐃»
+«𝐍𝐈𝐀𝐙𝐈-𝐌𝐃»
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 <h1 align="center">
-  <img src="https://files.catbox.moe/hg5hj6.jpg" alt="𝐀𝐃𝐄𝐄𝐋-𝐌𝐃" width="800" style="border-radius:25px;box-shadow:0 0 30px violet;"/>
+  <img src="https://files.catbox.moe/hg5hj6.jpg" alt="𝐍𝐈𝐀𝐙𝐈-𝐌𝐃" width="800" style="border-radius:25px;box-shadow:0 0 30px violet;"/>
 </h1>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 <h1 align="center">
@@ -12,24 +12,24 @@
                font-size: 45px; 
                font-weight: bold;">
     <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-    ✨𝐀𝐃𝐄𝐄𝐋-𝐌𝐃✨
+    ✨𝐍𝐈𝐀𝐙𝐈-𝐌𝐃✨
     <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
   </span>
 </h1>
 
 <p align="center">
-  <b>A multi-device WhatsApp bot created & maintained by <span style="color:#00FFFF">ADEEL</span> 🚀</b>
+  <b>A multi-device WhatsApp bot created & maintained by <span style="color:#00FFFF">NIAZI</span> 🚀</b>
 </p>
 
 ---
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 ## ⭐ 𝐅𝐎𝐑𝐊 & 𝐒𝐓𝐀𝐑
 <p align="center">
-  <a href="https://github.com/Adeel-Xtech/ADEEL-MD/fork">
+  <a href="https://github.com/niazi-md/NIAZI-MD/fork">
     <img src="https://img.shields.io/badge/Fork-Repo-ff00ff?style=for-the-badge&logo=github&logoColor=white" />
   </a>
-  <a href="https://github.com/Adeel-Xtech/ADEEL-MD/fork">
-    <img src="https://img.shields.io/github/stars/ADEEL967MD/ADEEL-MD?style=for-the-badge&color=gold&logo=github" />
+  <a href="https://github.com/niazi-md/NIAZI-MD/fork">
+    <img src="https://img.shields.io/github/stars/niazi-md/NIAZI-MD?style=for-the-badge&color=gold&logo=github" />
   </a>
 </p>
 <p align="center">💡 Don’t forget to <b>Fork</b> & <b>Star ⭐</b> this repo before using!</p>
@@ -38,7 +38,7 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 ## 🔑 𝐆𝐄𝐓 𝐏𝐀𝐈𝐑
 <p align="center">
-  <a href="https://adeel-xtech-97cef03b1167.herokuapp.com/">
+  <a href="https://niazi-md-session.herokuapp.com/">
     <img src="https://img.shields.io/badge/Get-PAIR_CODE-00BFFF?style=for-the-badge&logo=whatsapp&logoColor=white" />
   </a>
 </p>
@@ -48,7 +48,7 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 ## 🚀 𝐃𝐄𝐏𝐋𝐎𝐘𝐄 𝐍𝐎𝐖 
 <p align="center">
-  <a href="https://dashboard.heroku.com/new?template=https://github.com/Adeel-Xtech/ADEEL-MD">
+  <a href="https://dashboard.heroku.com/new?template=https://github.com/niazi-md/NIAZI-MD">
     <img src="https://img.shields.io/badge/Deploy-Heroku-7952B3?style=for-the-badge&logo=heroku&logoColor=white" />
   </a>
 </p>
@@ -64,7 +64,7 @@
   <a href="https://whatsapp.com/channel/0029VbBmz4V5vKAIaWfYPT0C">
     <img src="https://img.shields.io/badge/Join-Channel-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
   </a>
-  <a href="https://api.whatsapp.com/send?phone=+923035512967&text=➪𝐇𝐄𝐘𓆩🐍🍷🌹'">
+  <a href="https://api.whatsapp.com/send?phone=+923127115951&text=➪𝐇𝐄𝐘𓆩🐍🍷🌹'>">
     <img src="https://img.shields.io/badge/Contact-Owner-ff0000?style=for-the-badge&logo=whatsapp&logoColor=white" />
   </a>
 </p>
@@ -76,9 +76,9 @@
 ## ⚡𝐅𝐄𝐀𝐓𝐔𝐑𝐄𝐒
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 - ✅ MEDIA DOWNLOAD 📺 | Many cool features 🍷  
-✅ GROUP FUCHER 𓆩🐍 | Many cool features 🍷  
-✅ AUTO REPLY 🍨 | Many cool features 🍷  
-✅ AUTO RECORDING HYPING | Many cool features 🍷  
+- ✅ GROUP FEATURES 𓆩🐍 | Many cool features 🍷  
+- ✅ AUTO REPLY 🍨 | Many cool features 🍷  
+- ✅ AUTO RECORDING HYPING | Many cool features 🍷  
 ✨ MORE FEATURES ON THIS BOARD ✨  
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
@@ -108,6 +108,7 @@
 ---
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 <h2 align="center">
-  🌈✨ ᴛʜᴀɴᴋ ғᴏʀ ᴜsɪɴɢ <span style="color:#00FFFF">𝐀𝐃𝐄𝐄𝐋-𝐌𝐃</span>✨🌈
+  🌈✨ ᴛʜᴀɴᴋ ғᴏʀ ᴜsɪɴɢ <span style="color:#00FFFF">𝐍𝐈𝐀𝐙𝐈-𝐌𝐃</span>✨🌈
 </h2>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+
